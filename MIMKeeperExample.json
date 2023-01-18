@@ -1,0 +1,23 @@
+{"MIMKeeper":
+    {"Objects":[
+        {"Object":{"Type":"Person" ,"XPath":"/Person[(not(EmployeeStatus='Disabled'))]",
+            "ReferencedObjects":[
+                {"ReferencedObject":{"Type":"Person", "AttributeReference":"Manager", "Mode":"Normal",
+                    "Mappings":[
+                        {"Mapping":{"From":"AccountName", "To":"ManagerAccountName","UpdateIfNull":"true"}},      
+                        {"Mapping":{"From":"LastName", "To":"ManagerLastName","UpdateIfNull":"true"}},      
+                        {"Mapping":{"From":"FirstName", "To":"ManagerFirstName","UpdateIfNull":"true"}},      
+                        {"Mapping":{"From":"Email", "To":"ManagerEmail","UpdateIfNull":"true"}}
+                    ]
+                }},
+                {"ReferencedObject":{"Type":"Site", "XPath":"/Person[Site=/Site]/Site", "AttributeReference":"Site", "Mode":"Normal",
+                "Mappings":[
+                        {"Mapping":{"From":"SiteCode", "To":"SiteCode","UpdateIfNull":"false"}},         
+                        {"Mapping":{"From":"City", "To":"City", "UpdateIfNull":"false"}},
+                        {"Mapping":{"From":"Country", "To":"Country", "UpdateIfNull":"false"}}
+                    ]
+                }}
+            ]
+        }}
+    ]}
+}
